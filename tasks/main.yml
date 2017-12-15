@@ -1,0 +1,11 @@
+---
+- name: Create Wordlist directory
+  file:
+    path: "{{ wordlist_path }}"
+    state: directory
+
+- name: Download Top95Thousand-probable.txt
+  get_url:
+    dest: "{{ wordlist_path }}"
+    url: https://github.com/berzerk0/Probable-Wordlists/raw/master/Real-Passwords/Top95Thousand-probable.txt 
+
