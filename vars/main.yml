@@ -1,2 +1,3 @@
 ---
 wordlist_path: "{{ ansible_env.HOME }}/Wordlists"
+wordlist_git_location: "/opt"

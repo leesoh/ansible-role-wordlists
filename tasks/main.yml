@@ -8,4 +8,17 @@
   get_url:
     dest: "{{ wordlist_path }}"
     url: https://github.com/berzerk0/Probable-Wordlists/raw/master/Real-Passwords/Top95Thousand-probable.txt 
+    force: yes
 
+- name: Download FuzzDB
+  become: true
+  git:
+    repo: https://github.com/fuzzdb-project/fuzzdb.git
+    dest: "{{ wordlist_git_location }}/fuzzdb"
+    update: yes
+
+- name: Create FuzzDB symlink
+  file:
+    state: link
+    src: "{{ wordlist_git_location }}/fuzzdb"
+    path: "{{ wordlist_path }}/fuzzdb"
