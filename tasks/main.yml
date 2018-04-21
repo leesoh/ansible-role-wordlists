@@ -4,10 +4,10 @@
     path: "{{ wordlist_path }}"
     state: directory
 
-- name: Download Top95Thousand-probable.txt
+- name: Download Top304Thousand-probable-v2.txt
   get_url:
     dest: "{{ wordlist_path }}"
-    url: https://github.com/berzerk0/Probable-Wordlists/raw/master/Real-Passwords/Top95Thousand-probable.txt 
+    url: https://github.com/berzerk0/Probable-Wordlists/raw/master/Real-Passwords/Top304Thousand-probable-v2.txt
     force: yes
 
 - name: Download FuzzDB
