@@ -8,7 +8,6 @@
   get_url:
     dest: "{{ wordlist_path }}"
     url: https://github.com/berzerk0/Probable-Wordlists/raw/master/Real-Passwords/Top304Thousand-probable-v2.txt
-    force: yes
 
 - name: Download FuzzDB
   become: true
