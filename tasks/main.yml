@@ -21,3 +21,16 @@
     state: link
     src: "{{ wordlist_git_location }}/fuzzdb"
     path: "{{ wordlist_path }}/fuzzdb"
+
+- name: Download SecLists
+  become: true
+  git:
+    repo: https://github.com/danielmiessler/SecLists.git
+    dest: "{{ wordlist_git_location }}/SecLists"
+    update: yes
+
+- name: Create SecLists symlink
+  file:
+    state: link
+    src: "{{ wordlist_git_location }}/SecLists"
+    path: "{{ wordlist_path }}/SecLists"
