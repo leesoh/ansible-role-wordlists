@@ -21,12 +21,11 @@ None
 Example Playbook
 ----------------
 
-    - hosts: servers
-      roles:
-         - { role: leesoh.wordlists }
+- hosts: servers
+  roles:
+      - leesoh.wordlists
 
 License
 -------
 
 BSD
-
